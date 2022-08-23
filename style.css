@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-color: #0f0f0f;
+  --remove-color: #F75A68;
+  --button-color: #065E7C;
+  --placeholder-color: #7C7C8A;
+  --text-color: #E1E1E6;
+  --favorite-color: #ffffff;
+
+  --odd-color: rgba(6, 22, 27, 0.5);
+  --event-color: #06181C;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--bg-color);
+  font-family: "Roboto", sans-serif;
+
+  width: 100%;
+}
+
+#app {
+  width: 1120px;
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  height: 48px;
+  margin: 11.5rem 0 8.7rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  color: #ffffff;
+}
+
+
+.input-box {
+  display: flex;
+  gap: .8rem;
+}
+
+.input-box input {
+  width: 462px;
+  height: 38px;
+  padding: 1.6rem;
+
+  border: 0;
+  border-radius: 5px;
+  background: #06181C;
+  color: var(--text-color);
+}
+
+.input-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .8rem;
+  width: 170px;
+  border: 0;
+  background-color: var(--button-color);
+  border-radius: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.input-box button:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  border: 1px solid #4A808C;
+  border-radius: 12px;
+
+  width: 100%;
+}
+
+tbody img {
+  width: 5.6rem;
+  height: 5.6rem;
+  border-radius: 50%;
+}

@@ -6,7 +6,7 @@ export class Favorites {
     this.load()
   }
   load() {
-    this.entries = JSON.parse(localStorage.getItem("@github-favorites:"))
+    this.entries = JSON.parse(localStorage.getItem("@github-favorites:")) || []
   }
 
   save() {

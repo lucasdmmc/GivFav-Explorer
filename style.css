@@ -15,7 +15,7 @@
   --favorite-color: #ffffff;
 
   --odd-color: rgba(6, 22, 27, 0.5);
-  --event-color: #06181C;
+  --even-color: #06181C;
 }
 
 body {
@@ -27,14 +27,14 @@ body {
 }
 
 #app {
-  width: 1120px;
+  max-width: 1120px;
   margin: 0 auto;
 }
 
 header {
   width: 100%;
   height: 48px;
-  margin: 11.5rem 0 8.7rem 0;
+  margin: 2rem 0 8.7rem 0;
 
   display: flex;
   align-items: center;
@@ -71,10 +71,13 @@ h1 {
   border: 0;
   background-color: var(--button-color);
   border-radius: 5px;
+
   color: #ffffff;
   text-transform: uppercase;
   font-weight: bold;
   cursor: pointer;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
 }
 
 .input-box button:hover {
@@ -82,14 +85,80 @@ h1 {
 }
 
 table {
-  border: 1px solid #4A808C;
-  border-radius: 12px;
-
+  border-collapse: collapse;
   width: 100%;
+}
+
+table th:first-child() {
+  border-top-left-radius: 12px;
+}
+
+table tr:nth-child(odd) {
+  background: var(--odd-color)
+}
+
+table tr:nth-child(even) {
+  background: var(--even-color)
+}
+
+thead {
+  background: #092D38;;
+}
+
+thead td {
+  font-weight: bold;
+  color: var(--text-color);
+  padding: 1.6rem 4rem;
+}
+
+tbody .user{
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+tbody td {
+  padding: 2.4rem 4rem;
 }
 
 tbody img {
   width: 5.6rem;
   height: 5.6rem;
   border-radius: 50%;
+}
+
+tbody a {
+  text-decoration: none;
+  font-weight: normal;
+  color: var(--text-color);
+  font-size: 2.0rem;
+}
+
+tbody p, td {
+  font-weight: bold;
+  color: #E1E1E6;
+  font-size: 2.0rem;
+  line-height: 160%;
+}
+
+tbody button {
+  border: none;
+  background-color: transparent;
+  color: var(--remove-color);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 2.0rem;
+  line-height: 160%;
+}
+
+.table-border {
+  border: 2px solid #4A808C;
+  border-radius: 1.2rem;
+  -webkit-border-radius: 1.2rem;
+  -moz-border-radius: 1.2rem;
+  overflow: hidden;
+}
+
+.clean {
+  height: 62.4rem;
 }
